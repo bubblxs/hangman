@@ -1,4 +1,4 @@
-public class Hangman
+public class Sprites
 {
     private string[] _sprites = {
         @"I---------|" + '\n' +
@@ -84,7 +84,7 @@ public class Hangman
 
     private string _hangman = string.Empty;
 
-    public Hangman()
+    public Sprites()
     {
         _hangman = _sprites[0];
     }

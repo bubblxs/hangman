@@ -38,7 +38,7 @@ namespace hangman
 
             do
             {
-                Hangman hangman = new();
+                Sprites hangman = new();
                 Word word = new(wordList[new Random().Next(0, wordList.Count - 1)]);
                 int attempt = 0;
                 int maxNumAttempts = hangman.GetNumOfSprites() - 1;
