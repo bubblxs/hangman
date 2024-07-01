@@ -38,16 +38,16 @@ namespace hangman
 
             do
             {
-                Sprites hangman = new();
+                Sprites sprite = new();
                 Word word = new(wordList[new Random().Next(0, wordList.Count - 1)]);
                 int attempt = 0;
-                int maxNumAttempts = hangman.GetNumOfSprites() - 1;
-                char[] mask = word.BuildWordMask().ToCharArray();
+                int maxNumAttempts = sprite.GetNumOfSprites() - 1;
+                char[] mask = word.GetWordMask().ToCharArray();
 
                 while (true)
                 {
                     Console.Clear();
-                    Console.WriteLine(hangman.GetHangman());
+                    Console.WriteLine(sprite.GetSprite());
                     Console.WriteLine($"{new string(mask)}");
                     Console.WriteLine($"\n[!] wrong attempts: {attempt}/{maxNumAttempts}\n");
 
@@ -70,7 +70,7 @@ namespace hangman
                     if (indexes.Count == 0)
                     {
                         attempt += 1;
-                        hangman.UpdateSprite(attempt);
+                        sprite.UpdateSprite(attempt);
                     }
                     else
                     {

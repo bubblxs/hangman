@@ -82,21 +82,21 @@ public class Sprites
         @"__________|_______",
     };
 
-    private string _hangman = string.Empty;
+    private string _sprite = string.Empty;
 
     public Sprites()
     {
-        _hangman = _sprites[0];
+        _sprite = _sprites[0];
     }
 
     public void UpdateSprite(int n)
     {
-        _hangman = _sprites[n];
+        _sprite = _sprites[n];
     }
 
-    public string GetHangman()
+    public string GetSprite()
     {
-        return _hangman;
+        return _sprite;
     }
 
     public int GetNumOfSprites()

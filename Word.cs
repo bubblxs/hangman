@@ -3,10 +3,12 @@ using System.Text;
 public class Word
 {
     private string _word;
+    private string _wordMask;
 
     public Word(string word)
     {
         _word = word;
+        _wordMask = BuildWordMask();
     }
 
     public string GetWord()
@@ -39,7 +41,7 @@ public class Word
         return string.Equals(_word, word, StringComparison.OrdinalIgnoreCase);
     }
 
-    public string BuildWordMask()
+    private string BuildWordMask()
     {
         const char maskChar = '_';
         string mask = new(string.Empty);
@@ -50,5 +52,9 @@ public class Word
         }
 
         return mask;
+    }
+
+    public string GetWordMask(){
+        return _wordMask;
     }
 }
